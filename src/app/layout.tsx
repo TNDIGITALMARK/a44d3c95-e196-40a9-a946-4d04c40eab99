@@ -32,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script src="/phoenix-tracking.js" async></script>
         <QueryProvider>
           <ThemeProvider
             attribute="class"
