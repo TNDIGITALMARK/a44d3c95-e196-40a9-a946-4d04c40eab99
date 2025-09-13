@@ -14,7 +14,7 @@ All colors MUST be HSL.
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
 
-  --primary: 222.2 47.4% 11.2%;
+  --primary: 262 83% 58%;
   --primary-foreground: 210 40% 98%;
 
   --secondary: 210 40% 96.1%;
@@ -43,6 +43,13 @@ All colors MUST be HSL.
   --sidebar-accent-foreground: 240 5.9% 10%;
   --sidebar-border: 220 13% 91%;
   --sidebar-ring: 217.2 91.2% 59.8%;
+  
+  /* Ronim brand colors */
+  --ronim-gradient-start: 262 83% 58%;
+  --ronim-gradient-middle: 280 71% 65%;
+  --ronim-gradient-end: 320 76% 68%;
+  --ronim-accent-blue: 217 91% 60%;
+  --ronim-accent-pink: 330 76% 68%;
 }
 
 .dark {
@@ -55,8 +62,8 @@ All colors MUST be HSL.
   --popover: 222.2 84% 4.9%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: 262 83% 58%;
+  --primary-foreground: 210 40% 98%;
 
   --secondary: 217.2 32.6% 17.5%;
   --secondary-foreground: 210 40% 98%;
@@ -81,6 +88,13 @@ All colors MUST be HSL.
   --sidebar-accent-foreground: 240 4.8% 95.9%;
   --sidebar-border: 240 3.7% 15.9%;
   --sidebar-ring: 217.2 91.2% 59.8%;
+  
+  /* Ronim brand colors - dark theme */
+  --ronim-gradient-start: 262 83% 58%;
+  --ronim-gradient-middle: 280 71% 65%;
+  --ronim-gradient-end: 320 76% 68%;
+  --ronim-accent-blue: 217 91% 60%;
+  --ronim-accent-pink: 330 76% 68%;
 }
 
 @theme {
@@ -124,6 +138,13 @@ All colors MUST be HSL.
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
+  
+  /* Ronim brand color utilities */
+  --color-ronim-primary: hsl(var(--ronim-gradient-start));
+  --color-ronim-secondary: hsl(var(--ronim-gradient-middle));
+  --color-ronim-accent: hsl(var(--ronim-gradient-end));
+  --color-ronim-blue: hsl(var(--ronim-accent-blue));
+  --color-ronim-pink: hsl(var(--ronim-accent-pink));
   
   /* Border Radius */
   --radius-lg: var(--radius);

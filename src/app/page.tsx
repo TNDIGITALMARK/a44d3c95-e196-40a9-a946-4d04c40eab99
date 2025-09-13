@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Heart, MessageCircle, Share2, Plus, Home, Users, Bell, Mail, User, Search } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const dynamic = 'force-dynamic'
 
@@ -116,7 +117,9 @@ export default function Ronim() {
       <header className="sticky top-0 z-50 border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
         <div className="container flex h-16 items-center px-4">
           <div className="flex items-center space-x-4">
-            <h1 className="text-2xl font-bold text-primary">Ronim</h1>
+            <div className="flex items-center space-x-2">
+              <Image src="/generated/ronim-logo.png" alt="Ronim Logo" width={120} height={40} className="h-8 w-auto" />
+            </div>
             <div className="relative flex-1 max-w-sm">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
