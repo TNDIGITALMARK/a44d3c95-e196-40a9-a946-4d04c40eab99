@@ -48,11 +48,12 @@ export default function Ronim() {
   ])
 
   const [newPost, setNewPost] = useState('')
+  const [postImage, setPostImage] = useState(null)
   const [commentInputs, setCommentInputs] = useState({})
   const [showComments, setShowComments] = useState({})
   
   const handlePostSubmit = () => {
-    if (newPost.trim()) {
+    if (newPost.trim() || postImage) {
       const post = {
         id: posts.length + 1,
         author: 'You',
@@ -61,13 +62,29 @@ export default function Ronim() {
         content: newPost,
         likes: 0,
         comments: 0,
-        image: null,
+        image: postImage,
         liked: false,
         userComments: []
       }
       setPosts([post, ...posts])
       setNewPost('')
+      setPostImage(null)
     }
+  }
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0]
+    if (file) {
+      const reader = new FileReader()
+      reader.onload = (e) => {
+        setPostImage(e.target.result)
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+
+  const removeImage = () => {
+    setPostImage(null)
   }
 
   const handleLike = (postId) => {
@@ -120,22 +137,24 @@ export default function Ronim() {
             <div className="flex items-center space-x-2">
               <Image src="/generated/ronim-logo.png" alt="Ronim Logo" width={120} height={40} className="h-8 w-auto" />
             </div>
-            <div className="relative flex-1 max-w-sm">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <input
-                type="search"
-                placeholder="Search Ronim..."
-                className="w-full pl-10 pr-4 py-2 bg-muted rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
+            <Link href="/search" className="relative flex-1 max-w-sm">
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none z-10" />
+              <div className="w-full pl-10 pr-4 py-2 bg-muted rounded-full text-sm text-muted-foreground cursor-pointer hover:bg-muted/80 transition-colors">
+                Search Ronim...
+              </div>
+            </Link>
           </div>
           <nav className="flex items-center space-x-6">
             <Home className="h-6 w-6 text-primary" />
             <Link href="/friends">
               <Users className="h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer" />
             </Link>
-            <Bell className="h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer" />
-            <Mail className="h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer" />
+            <Link href="/notifications">
+              <Bell className="h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer" />
+            </Link>
+            <Link href="/messages">
+              <Mail className="h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer" />
+            </Link>
             <Link href="/profile">
               <User className="h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer" />
             </Link>
@@ -165,9 +184,39 @@ export default function Ronim() {
                     className="w-full p-3 bg-muted rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
                     rows={3}
                   />
+                  
+                  {/* Image Preview */}
+                  {postImage && (
+                    <div className="mt-3 relative">
+                      <img 
+                        src={postImage} 
+                        alt="Upload preview" 
+                        className="max-h-64 w-full object-cover rounded-lg" 
+                      />
+                      <button
+                        onClick={removeImage}
+                        className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm hover:bg-red-600"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  )}
+                  
                   <div className="flex justify-between items-center mt-3">
                     <div className="flex space-x-2">
-                      <button className="text-muted-foreground hover:text-primary">📷</button>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageUpload}
+                        className="hidden"
+                        id="image-upload"
+                      />
+                      <label
+                        htmlFor="image-upload"
+                        className="text-muted-foreground hover:text-primary cursor-pointer"
+                      >
+                        📷
+                      </label>
                       <button className="text-muted-foreground hover:text-primary">😊</button>
                       <button className="text-muted-foreground hover:text-primary">📍</button>
                     </div>
@@ -201,8 +250,18 @@ export default function Ronim() {
                 <div className="px-4 pb-3">
                   <p className="text-foreground">{post.content}</p>
                   {post.image && (
-                    <div className="mt-3 text-6xl text-center py-8 bg-muted rounded-lg">
-                      {post.image}
+                    <div className="mt-3">
+                      {typeof post.image === 'string' && post.image.startsWith('data:') ? (
+                        <img 
+                          src={post.image} 
+                          alt="Post image" 
+                          className="w-full max-h-96 object-cover rounded-lg" 
+                        />
+                      ) : (
+                        <div className="text-6xl text-center py-8 bg-muted rounded-lg">
+                          {post.image}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
