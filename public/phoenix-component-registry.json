@@ -2,10 +2,10 @@
   "projectId": "a44d3c95-e196-40a9-a946-4d04c40eab99",
   "userId": "hw8u8FgXeBcQGo9CRezTWmEivX92",
   "version": "1.0.0",
-  "generatedAt": "2025-09-13T19:02:17.565Z",
+  "generatedAt": "2025-09-13T19:09:51.110Z",
   "components": {
-    "phoenix-1757790137539": {
-      "phoenixId": "phoenix-1757790137539",
+    "phoenix-1757790591074": {
+      "phoenixId": "phoenix-1757790591074",
       "componentName": "Error",
       "filePath": "src/app/error.tsx",
       "lineNumber": 5,
@@ -22,8 +22,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757790137540": {
-      "phoenixId": "phoenix-1757790137540",
+    "phoenix-1757790591075": {
+      "phoenixId": "phoenix-1757790591075",
       "componentName": "FriendsPage",
       "filePath": "src/app/friends/page.tsx",
       "lineNumber": 7,
@@ -50,8 +50,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757790137541": {
-      "phoenixId": "phoenix-1757790137541",
+    "phoenix-1757790591076": {
+      "phoenixId": "phoenix-1757790591076",
       "componentName": "GlobalError",
       "filePath": "src/app/global-error.tsx",
       "lineNumber": 5,
@@ -81,13 +81,13 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757790137542": {
-      "phoenixId": "phoenix-1757790137542",
+    "phoenix-1757790591077": {
+      "phoenixId": "phoenix-1757790591077",
       "componentName": "RootLayout",
       "filePath": "src/app/layout.tsx",
       "lineNumber": 25,
       "columnNumber": 15,
-      "sourceCode": "export default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\" suppressHydrationWarning>\n      <body\n        className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n      >\n        <QueryProvider>\n          <ThemeProvider\n            attribute=\"class\"\n            defaultTheme=\"system\"\n            enableSystem\n            disableTransitionOnChange\n          >\n            <TooltipProvider>\n              {children}\n              <Toaster />\n              <Sonner />\n            </TooltipProvider>\n          </ThemeProvider>\n        </QueryProvider>\n      </body>\n    </html>\n  );\n}",
+      "sourceCode": "export default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\" suppressHydrationWarning>\n      <body\n        className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n      >\n        <script src=\"/phoenix-tracking.js\" async></script>\n        <QueryProvider>\n          <ThemeProvider\n            attribute=\"class\"\n            defaultTheme=\"system\"\n            enableSystem\n            disableTransitionOnChange\n          >\n            <TooltipProvider>\n              {children}\n              <Toaster />\n              <Sonner />\n            </TooltipProvider>\n          </ThemeProvider>\n        </QueryProvider>\n      </body>\n    </html>\n  );\n}",
       "props": [
         {
           "name": "children",
@@ -98,15 +98,17 @@
       "imports": [],
       "modificationHints": [
         "text-update",
-        "style-change"
+        "style-change",
+        "careful-modification",
+        "test-thoroughly"
       ],
       "astAnalysis": {
         "componentType": "functional",
-        "complexity": "moderate"
+        "complexity": "complex"
       }
     },
-    "phoenix-1757790137543": {
-      "phoenixId": "phoenix-1757790137543",
+    "phoenix-1757790591078": {
+      "phoenixId": "phoenix-1757790591078",
       "componentName": "Loading",
       "filePath": "src/app/loading.tsx",
       "lineNumber": 1,
@@ -123,8 +125,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757790137544": {
-      "phoenixId": "phoenix-1757790137544",
+    "phoenix-1757790591079": {
+      "phoenixId": "phoenix-1757790591079",
       "componentName": "LoginPage",
       "filePath": "src/app/login/page.tsx",
       "lineNumber": 7,
@@ -149,8 +151,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757790137545": {
-      "phoenixId": "phoenix-1757790137545",
+    "phoenix-1757790591080": {
+      "phoenixId": "phoenix-1757790591080",
       "componentName": "NotFound",
       "filePath": "src/app/not-found.tsx",
       "lineNumber": 3,
@@ -167,13 +169,13 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757790137546": {
-      "phoenixId": "phoenix-1757790137546",
+    "phoenix-1757790591081": {
+      "phoenixId": "phoenix-1757790591081",
       "componentName": "Ronim",
       "filePath": "src/app/page.tsx",
-      "lineNumber": 9,
+      "lineNumber": 10,
       "columnNumber": 15,
-      "sourceCode": "export default function Ronim() {\n  const [posts, setPosts] = useState([\n    {\n      id: 1,\n      author: 'Sarah Chen',\n      avatar: '👩‍💻',\n      time: '2h ago',\n      content: 'Just launched my new portfolio website! So excited to share my work with the world. 🚀',\n      likes: 24,\n      comments: 8,\n      image: null,\n      liked: false,\n      userComments: []\n    },\n    {\n      id: 2,\n      author: 'Mike Johnson',\n      avatar: '👨‍🎨',\n      time: '4h ago',\n      content: 'Beautiful sunset from my hiking trip this weekend. Nature never ceases to amaze me! 🌅',\n      likes: 156,\n      comments: 23,\n      image: '🌅',\n      liked: false,\n      userComments: []\n    },\n    {\n      id: 3,\n      author: 'Alex Rivera',\n      avatar: '👨‍💼',\n      time: '6h ago',\n      content: 'Team meeting went great today! We are making amazing progress on our new project. Collaboration is key! 💼',\n      likes: 42,\n      comments: 12,\n      image: null,\n      liked: false,\n      userComments: []\n    }\n  ])\n\n  const [newPost, setNewPost] = useState('')\n  const [commentInputs, setCommentInputs] = useState({})\n  const [showComments, setShowComments] = useState({})\n  \n  const handlePostSubmit = () => {\n    if (newPost.trim()) {\n      const post = {\n        id: posts.length + 1,\n        author: 'You',\n        avatar: '😊',\n        time: 'now',\n        content: newPost,\n        likes: 0,\n        comments: 0,\n        image: null,\n        liked: false,\n        userComments: []\n      }\n      setPosts([post, ...posts])\n      setNewPost('')\n    }\n  }\n\n  const handleLike = (postId) => {\n    setPosts(posts.map(post => {\n      if (post.id === postId) {\n        return {\n          ...post,\n          liked: !post.liked,\n          likes: post.liked ? post.likes - 1 : post.likes + 1\n        }\n      }\n      return post\n    }))\n  }\n\n  const handleComment = (postId) => {\n    const commentText = commentInputs[postId]\n    if (commentText && commentText.trim()) {\n      setPosts(posts.map(post => {\n        if (post.id === postId) {\n          const newComment = {\n            id: post.userComments.length + 1,\n            text: commentText,\n            author: 'You',\n            avatar: '😊',\n            time: 'now'\n          }\n          return {\n            ...post,\n            userComments: [...post.userComments, newComment],\n            comments: post.comments + 1\n          }\n        }\n        return post\n      }))\n      setCommentInputs({...commentInputs, [postId]: ''})\n    }\n  }\n\n  const toggleComments = (postId) => {\n    setShowComments({...showComments, [postId]: !showComments[postId]})\n  }\n\n  return (\n    <div className=\"min-h-screen bg-background\">\n      {/* Header */}\n      <header className=\"sticky top-0 z-50 border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60\">\n        <div className=\"container flex h-16 items-center px-4\">\n          <div className=\"flex items-center space-x-4\">\n            <h1 className=\"text-2xl font-bold text-primary\">Ronim</h1>\n            <div className=\"relative flex-1 max-w-sm\">\n              <Search className=\"absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground\" />\n              <input\n                type=\"search\"\n                placeholder=\"Search Ronim...\"\n                className=\"w-full pl-10 pr-4 py-2 bg-muted rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary\"\n              />\n            </div>\n          </div>\n          <nav className=\"flex items-center space-x-6\">\n            <Home className=\"h-6 w-6 text-primary\" />\n            <Link href=\"/friends\">\n              <Users className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            </Link>\n            <Bell className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            <Mail className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            <Link href=\"/profile\">\n              <User className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            </Link>\n            <Link \n              href=\"/login\"\n              className=\"px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm\"\n            >\n              Login\n            </Link>\n          </nav>\n        </div>\n      </header>\n\n      <div className=\"container max-w-4xl mx-auto py-6 px-4\">\n        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\">\n          {/* Main Feed */}\n          <div className=\"lg:col-span-2 space-y-6\">\n            {/* Create Post */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <div className=\"flex items-start space-x-3\">\n                <div className=\"text-2xl\">😊</div>\n                <div className=\"flex-1\">\n                  <textarea\n                    value={newPost}\n                    onChange={(e) => setNewPost(e.target.value)}\n                    placeholder=\"What's on your mind?\"\n                    className=\"w-full p-3 bg-muted rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary\"\n                    rows={3}\n                  />\n                  <div className=\"flex justify-between items-center mt-3\">\n                    <div className=\"flex space-x-2\">\n                      <button className=\"text-muted-foreground hover:text-primary\">📷</button>\n                      <button className=\"text-muted-foreground hover:text-primary\">😊</button>\n                      <button className=\"text-muted-foreground hover:text-primary\">📍</button>\n                    </div>\n                    <button\n                      onClick={handlePostSubmit}\n                      className=\"px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors\"\n                    >\n                      Post\n                    </button>\n                  </div>\n                </div>\n              </div>\n            </div>\n\n            {/* Posts */}\n            {posts.map((post) => (\n              <div key={post.id} className=\"bg-card rounded-lg border\">\n                {/* Post Header */}\n                <div className=\"p-4 flex items-start space-x-3\">\n                  <div className=\"text-2xl\">{post.avatar}</div>\n                  <div className=\"flex-1\">\n                    <div className=\"flex items-center space-x-2\">\n                      <h3 className=\"font-semibold\">{post.author}</h3>\n                      <span className=\"text-muted-foreground text-sm\">•</span>\n                      <span className=\"text-muted-foreground text-sm\">{post.time}</span>\n                    </div>\n                  </div>\n                </div>\n\n                {/* Post Content */}\n                <div className=\"px-4 pb-3\">\n                  <p className=\"text-foreground\">{post.content}</p>\n                  {post.image && (\n                    <div className=\"mt-3 text-6xl text-center py-8 bg-muted rounded-lg\">\n                      {post.image}\n                    </div>\n                  )}\n                </div>\n\n                {/* Post Actions */}\n                <div className=\"px-4 py-3 border-t flex items-center justify-between\">\n                  <div className=\"flex items-center space-x-6\">\n                    <button \n                      onClick={() => handleLike(post.id)}\n                      className={`flex items-center space-x-2 transition-colors ${\n                        post.liked ? 'text-red-500' : 'text-muted-foreground hover:text-red-500'\n                      }`}\n                    >\n                      <Heart className={`h-5 w-5 ${post.liked ? 'fill-current' : ''}`} />\n                      <span className=\"text-sm\">{post.likes}</span>\n                    </button>\n                    <button \n                      onClick={() => toggleComments(post.id)}\n                      className=\"flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors\"\n                    >\n                      <MessageCircle className=\"h-5 w-5\" />\n                      <span className=\"text-sm\">{post.comments}</span>\n                    </button>\n                    <button className=\"flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors\">\n                      <Share2 className=\"h-5 w-5\" />\n                      <span className=\"text-sm\">Share</span>\n                    </button>\n                  </div>\n                </div>\n\n                {/* Comments Section */}\n                {showComments[post.id] && (\n                  <div className=\"px-4 pb-4 border-t bg-muted/20\">\n                    {/* Existing Comments */}\n                    {post.userComments.length > 0 && (\n                      <div className=\"space-y-3 mb-4 pt-4\">\n                        {post.userComments.map((comment) => (\n                          <div key={comment.id} className=\"flex items-start space-x-3\">\n                            <div className=\"text-sm\">{comment.avatar}</div>\n                            <div className=\"flex-1 bg-muted rounded-lg p-3\">\n                              <div className=\"flex items-center space-x-2 mb-1\">\n                                <span className=\"font-medium text-sm\">{comment.author}</span>\n                                <span className=\"text-xs text-muted-foreground\">{comment.time}</span>\n                              </div>\n                              <p className=\"text-sm\">{comment.text}</p>\n                            </div>\n                          </div>\n                        ))}\n                      </div>\n                    )}\n                    \n                    {/* Add Comment */}\n                    <div className=\"flex items-center space-x-3 pt-4\">\n                      <div className=\"text-sm\">😊</div>\n                      <div className=\"flex-1 flex space-x-2\">\n                        <input\n                          type=\"text\"\n                          placeholder=\"Write a comment...\"\n                          value={commentInputs[post.id] || ''}\n                          onChange={(e) => setCommentInputs({...commentInputs, [post.id]: e.target.value})}\n                          onKeyDown={(e) => e.key === 'Enter' && handleComment(post.id)}\n                          className=\"flex-1 px-3 py-2 bg-background rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary\"\n                        />\n                        <button \n                          onClick={() => handleComment(post.id)}\n                          className=\"px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors\"\n                        >\n                          Post\n                        </button>\n                      </div>\n                    </div>\n                  </div>\n                )}\n              </div>\n            ))}\n          </div>\n\n          {/* Sidebar */}\n          <div className=\"space-y-4\">\n            {/* User Profile Card */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <div className=\"flex items-center space-x-3\">\n                <div className=\"text-3xl\">😊</div>\n                <div>\n                  <h3 className=\"font-semibold\">Welcome to Ronim!</h3>\n                  <p className=\"text-sm text-muted-foreground\">Connect with friends and share your moments</p>\n                </div>\n              </div>\n            </div>\n\n            {/* Quick Stats */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <h3 className=\"font-semibold mb-3\">Your Activity</h3>\n              <div className=\"space-y-2 text-sm\">\n                <div className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Posts</span>\n                  <span>12</span>\n                </div>\n                <div className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Friends</span>\n                  <span>284</span>\n                </div>\n                <div className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Following</span>\n                  <span>156</span>\n                </div>\n              </div>\n            </div>\n\n            {/* Suggested Friends */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <h3 className=\"font-semibold mb-3\">People you may know</h3>\n              <div className=\"space-y-3\">\n                {[\n                  { name: 'Emma Wilson', avatar: '👩‍🎓', mutualFriends: 12 },\n                  { name: 'David Kim', avatar: '👨‍🔬', mutualFriends: 8 },\n                  { name: 'Lisa Garcia', avatar: '👩‍🎨', mutualFriends: 15 }\n                ].map((person, index) => (\n                  <div key={index} className=\"flex items-center justify-between\">\n                    <div className=\"flex items-center space-x-2\">\n                      <span className=\"text-lg\">{person.avatar}</span>\n                      <div>\n                        <p className=\"text-sm font-medium\">{person.name}</p>\n                        <p className=\"text-xs text-muted-foreground\">{person.mutualFriends} mutual friends</p>\n                      </div>\n                    </div>\n                    <button className=\"text-xs px-3 py-1 bg-primary text-primary-foreground rounded hover:bg-primary/90\">\n                      Add\n                    </button>\n                  </div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  )\n}",
+      "sourceCode": "export default function Ronim() {\n  const [posts, setPosts] = useState([\n    {\n      id: 1,\n      author: 'Sarah Chen',\n      avatar: '👩‍💻',\n      time: '2h ago',\n      content: 'Just launched my new portfolio website! So excited to share my work with the world. 🚀',\n      likes: 24,\n      comments: 8,\n      image: null,\n      liked: false,\n      userComments: []\n    },\n    {\n      id: 2,\n      author: 'Mike Johnson',\n      avatar: '👨‍🎨',\n      time: '4h ago',\n      content: 'Beautiful sunset from my hiking trip this weekend. Nature never ceases to amaze me! 🌅',\n      likes: 156,\n      comments: 23,\n      image: '🌅',\n      liked: false,\n      userComments: []\n    },\n    {\n      id: 3,\n      author: 'Alex Rivera',\n      avatar: '👨‍💼',\n      time: '6h ago',\n      content: 'Team meeting went great today! We are making amazing progress on our new project. Collaboration is key! 💼',\n      likes: 42,\n      comments: 12,\n      image: null,\n      liked: false,\n      userComments: []\n    }\n  ])\n\n  const [newPost, setNewPost] = useState('')\n  const [commentInputs, setCommentInputs] = useState({})\n  const [showComments, setShowComments] = useState({})\n  \n  const handlePostSubmit = () => {\n    if (newPost.trim()) {\n      const post = {\n        id: posts.length + 1,\n        author: 'You',\n        avatar: '😊',\n        time: 'now',\n        content: newPost,\n        likes: 0,\n        comments: 0,\n        image: null,\n        liked: false,\n        userComments: []\n      }\n      setPosts([post, ...posts])\n      setNewPost('')\n    }\n  }\n\n  const handleLike = (postId) => {\n    setPosts(posts.map(post => {\n      if (post.id === postId) {\n        return {\n          ...post,\n          liked: !post.liked,\n          likes: post.liked ? post.likes - 1 : post.likes + 1\n        }\n      }\n      return post\n    }))\n  }\n\n  const handleComment = (postId) => {\n    const commentText = commentInputs[postId]\n    if (commentText && commentText.trim()) {\n      setPosts(posts.map(post => {\n        if (post.id === postId) {\n          const newComment = {\n            id: post.userComments.length + 1,\n            text: commentText,\n            author: 'You',\n            avatar: '😊',\n            time: 'now'\n          }\n          return {\n            ...post,\n            userComments: [...post.userComments, newComment],\n            comments: post.comments + 1\n          }\n        }\n        return post\n      }))\n      setCommentInputs({...commentInputs, [postId]: ''})\n    }\n  }\n\n  const toggleComments = (postId) => {\n    setShowComments({...showComments, [postId]: !showComments[postId]})\n  }\n\n  return (\n    <div className=\"min-h-screen bg-background\">\n      {/* Header */}\n      <header className=\"sticky top-0 z-50 border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60\">\n        <div className=\"container flex h-16 items-center px-4\">\n          <div className=\"flex items-center space-x-4\">\n            <div className=\"flex items-center space-x-2\">\n              <Image src=\"/generated/ronim-logo.png\" alt=\"Ronim Logo\" width={120} height={40} className=\"h-8 w-auto\" />\n            </div>\n            <div className=\"relative flex-1 max-w-sm\">\n              <Search className=\"absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground\" />\n              <input\n                type=\"search\"\n                placeholder=\"Search Ronim...\"\n                className=\"w-full pl-10 pr-4 py-2 bg-muted rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary\"\n              />\n            </div>\n          </div>\n          <nav className=\"flex items-center space-x-6\">\n            <Home className=\"h-6 w-6 text-primary\" />\n            <Link href=\"/friends\">\n              <Users className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            </Link>\n            <Bell className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            <Mail className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            <Link href=\"/profile\">\n              <User className=\"h-6 w-6 text-muted-foreground hover:text-primary cursor-pointer\" />\n            </Link>\n            <Link \n              href=\"/login\"\n              className=\"px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm\"\n            >\n              Login\n            </Link>\n          </nav>\n        </div>\n      </header>\n\n      <div className=\"container max-w-4xl mx-auto py-6 px-4\">\n        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\">\n          {/* Main Feed */}\n          <div className=\"lg:col-span-2 space-y-6\">\n            {/* Create Post */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <div className=\"flex items-start space-x-3\">\n                <div className=\"text-2xl\">😊</div>\n                <div className=\"flex-1\">\n                  <textarea\n                    value={newPost}\n                    onChange={(e) => setNewPost(e.target.value)}\n                    placeholder=\"What's on your mind?\"\n                    className=\"w-full p-3 bg-muted rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary\"\n                    rows={3}\n                  />\n                  <div className=\"flex justify-between items-center mt-3\">\n                    <div className=\"flex space-x-2\">\n                      <button className=\"text-muted-foreground hover:text-primary\">📷</button>\n                      <button className=\"text-muted-foreground hover:text-primary\">😊</button>\n                      <button className=\"text-muted-foreground hover:text-primary\">📍</button>\n                    </div>\n                    <button\n                      onClick={handlePostSubmit}\n                      className=\"px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors\"\n                    >\n                      Post\n                    </button>\n                  </div>\n                </div>\n              </div>\n            </div>\n\n            {/* Posts */}\n            {posts.map((post) => (\n              <div key={post.id} className=\"bg-card rounded-lg border\">\n                {/* Post Header */}\n                <div className=\"p-4 flex items-start space-x-3\">\n                  <div className=\"text-2xl\">{post.avatar}</div>\n                  <div className=\"flex-1\">\n                    <div className=\"flex items-center space-x-2\">\n                      <h3 className=\"font-semibold\">{post.author}</h3>\n                      <span className=\"text-muted-foreground text-sm\">•</span>\n                      <span className=\"text-muted-foreground text-sm\">{post.time}</span>\n                    </div>\n                  </div>\n                </div>\n\n                {/* Post Content */}\n                <div className=\"px-4 pb-3\">\n                  <p className=\"text-foreground\">{post.content}</p>\n                  {post.image && (\n                    <div className=\"mt-3 text-6xl text-center py-8 bg-muted rounded-lg\">\n                      {post.image}\n                    </div>\n                  )}\n                </div>\n\n                {/* Post Actions */}\n                <div className=\"px-4 py-3 border-t flex items-center justify-between\">\n                  <div className=\"flex items-center space-x-6\">\n                    <button \n                      onClick={() => handleLike(post.id)}\n                      className={`flex items-center space-x-2 transition-colors ${\n                        post.liked ? 'text-red-500' : 'text-muted-foreground hover:text-red-500'\n                      }`}\n                    >\n                      <Heart className={`h-5 w-5 ${post.liked ? 'fill-current' : ''}`} />\n                      <span className=\"text-sm\">{post.likes}</span>\n                    </button>\n                    <button \n                      onClick={() => toggleComments(post.id)}\n                      className=\"flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors\"\n                    >\n                      <MessageCircle className=\"h-5 w-5\" />\n                      <span className=\"text-sm\">{post.comments}</span>\n                    </button>\n                    <button className=\"flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors\">\n                      <Share2 className=\"h-5 w-5\" />\n                      <span className=\"text-sm\">Share</span>\n                    </button>\n                  </div>\n                </div>\n\n                {/* Comments Section */}\n                {showComments[post.id] && (\n                  <div className=\"px-4 pb-4 border-t bg-muted/20\">\n                    {/* Existing Comments */}\n                    {post.userComments.length > 0 && (\n                      <div className=\"space-y-3 mb-4 pt-4\">\n                        {post.userComments.map((comment) => (\n                          <div key={comment.id} className=\"flex items-start space-x-3\">\n                            <div className=\"text-sm\">{comment.avatar}</div>\n                            <div className=\"flex-1 bg-muted rounded-lg p-3\">\n                              <div className=\"flex items-center space-x-2 mb-1\">\n                                <span className=\"font-medium text-sm\">{comment.author}</span>\n                                <span className=\"text-xs text-muted-foreground\">{comment.time}</span>\n                              </div>\n                              <p className=\"text-sm\">{comment.text}</p>\n                            </div>\n                          </div>\n                        ))}\n                      </div>\n                    )}\n                    \n                    {/* Add Comment */}\n                    <div className=\"flex items-center space-x-3 pt-4\">\n                      <div className=\"text-sm\">😊</div>\n                      <div className=\"flex-1 flex space-x-2\">\n                        <input\n                          type=\"text\"\n                          placeholder=\"Write a comment...\"\n                          value={commentInputs[post.id] || ''}\n                          onChange={(e) => setCommentInputs({...commentInputs, [post.id]: e.target.value})}\n                          onKeyDown={(e) => e.key === 'Enter' && handleComment(post.id)}\n                          className=\"flex-1 px-3 py-2 bg-background rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-primary\"\n                        />\n                        <button \n                          onClick={() => handleComment(post.id)}\n                          className=\"px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition-colors\"\n                        >\n                          Post\n                        </button>\n                      </div>\n                    </div>\n                  </div>\n                )}\n              </div>\n            ))}\n          </div>\n\n          {/* Sidebar */}\n          <div className=\"space-y-4\">\n            {/* User Profile Card */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <div className=\"flex items-center space-x-3\">\n                <div className=\"text-3xl\">😊</div>\n                <div>\n                  <h3 className=\"font-semibold\">Welcome to Ronim!</h3>\n                  <p className=\"text-sm text-muted-foreground\">Connect with friends and share your moments</p>\n                </div>\n              </div>\n            </div>\n\n            {/* Quick Stats */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <h3 className=\"font-semibold mb-3\">Your Activity</h3>\n              <div className=\"space-y-2 text-sm\">\n                <div className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Posts</span>\n                  <span>12</span>\n                </div>\n                <div className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Friends</span>\n                  <span>284</span>\n                </div>\n                <div className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Following</span>\n                  <span>156</span>\n                </div>\n              </div>\n            </div>\n\n            {/* Suggested Friends */}\n            <div className=\"bg-card rounded-lg border p-4\">\n              <h3 className=\"font-semibold mb-3\">People you may know</h3>\n              <div className=\"space-y-3\">\n                {[\n                  { name: 'Emma Wilson', avatar: '👩‍🎓', mutualFriends: 12 },\n                  { name: 'David Kim', avatar: '👨‍🔬', mutualFriends: 8 },\n                  { name: 'Lisa Garcia', avatar: '👩‍🎨', mutualFriends: 15 }\n                ].map((person, index) => (\n                  <div key={index} className=\"flex items-center justify-between\">\n                    <div className=\"flex items-center space-x-2\">\n                      <span className=\"text-lg\">{person.avatar}</span>\n                      <div>\n                        <p className=\"text-sm font-medium\">{person.name}</p>\n                        <p className=\"text-xs text-muted-foreground\">{person.mutualFriends} mutual friends</p>\n                      </div>\n                    </div>\n                    <button className=\"text-xs px-3 py-1 bg-primary text-primary-foreground rounded hover:bg-primary/90\">\n                      Add\n                    </button>\n                  </div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  )\n}",
       "props": [],
       "imports": [],
       "modificationHints": [
@@ -194,8 +196,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757790137547": {
-      "phoenixId": "phoenix-1757790137547",
+    "phoenix-1757790591082": {
+      "phoenixId": "phoenix-1757790591082",
       "componentName": "ProfilePage",
       "filePath": "src/app/profile/page.tsx",
       "lineNumber": 7,
@@ -219,8 +221,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757790137548": {
-      "phoenixId": "phoenix-1757790137548",
+    "phoenix-1757790591083": {
+      "phoenixId": "phoenix-1757790591083",
       "componentName": "QueryProvider",
       "filePath": "src/components/query-provider.tsx",
       "lineNumber": 6,
@@ -247,8 +249,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757790137549": {
-      "phoenixId": "phoenix-1757790137549",
+    "phoenix-1757790591084": {
+      "phoenixId": "phoenix-1757790591084",
       "componentName": "ThemeProvider",
       "filePath": "src/components/theme-provider.tsx",
       "lineNumber": 6,
@@ -271,8 +273,8 @@
         "complexity": "simple"
       }
     },
-    "phoenix-1757790137550": {
-      "phoenixId": "phoenix-1757790137550",
+    "phoenix-1757790591085": {
+      "phoenixId": "phoenix-1757790591085",
       "componentName": "Badge",
       "filePath": "src/components/ui/badge.tsx",
       "lineNumber": 30,
@@ -300,8 +302,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757790137551": {
-      "phoenixId": "phoenix-1757790137551",
+    "phoenix-1757790591086": {
+      "phoenixId": "phoenix-1757790591086",
       "componentName": "Calendar",
       "filePath": "src/components/ui/calendar.tsx",
       "lineNumber": 10,
@@ -336,8 +338,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757790137552": {
-      "phoenixId": "phoenix-1757790137552",
+    "phoenix-1757790591087": {
+      "phoenixId": "phoenix-1757790591087",
       "componentName": "Skeleton",
       "filePath": "src/components/ui/skeleton.tsx",
       "lineNumber": 3,
@@ -360,8 +362,8 @@
         "complexity": "simple"
       }
     },
-    "phoenix-1757790137553": {
-      "phoenixId": "phoenix-1757790137553",
+    "phoenix-1757790591088": {
+      "phoenixId": "phoenix-1757790591088",
       "componentName": "Toaster",
       "filePath": "src/components/ui/toaster.tsx",
       "lineNumber": 13,
@@ -385,6 +387,6 @@
   "stats": {
     "totalComponents": 15,
     "totalFiles": 65,
-    "processingTimeMs": 731
+    "processingTimeMs": 520
   }
 }
